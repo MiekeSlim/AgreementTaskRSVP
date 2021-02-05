@@ -4,6 +4,33 @@
 
 PennController.ResetPrefix(null) // Shorten command names (keep this line here)
 
+newTrial(
+    newVar("HandednessVar")
+    ,
+    newText("Handedness", "Are you left or right handed?")
+        .print()
+    ,
+    newKey("forj", "FJ")
+        .wait()
+    ,
+    newKey("forj", "FJ")
+        .wait("first")
+    ,
+    getKey("forj")
+        .test.pressed("F")
+        .success( 
+            setVar("HandednessVar")
+            ,
+            getText("Handedness").remove()
+            ,
+            newText("success", "You're a lefty!").print() )
+        .failure( 
+            getText("Handedness").remove()
+            ,
+            newText("failure", "You're a righty!").print() )
+
+    )
+
 PennController.Template("trials.csv",
     row => newTrial("Trials", 
       newController("DashedSentence", {
@@ -23,9 +50,19 @@ PennController.Template("trials.csv",
         newText("pl", "are")
             .css("font-size", "10vh")
         ,
+        newText("F", "F")
+            .css("font-size", "5vh")
+            .css("color", "blue")
+        ,     
+        newText("J", "J")
+            .css("font-size", "5vh")
+            .css("color", "blue")            
+        ,
         newCanvas("verbselection.canvas", "80vw", "20vh")
-            .add("center at 25%",0, getText("sg"))
-            .add("center at 75%",0, getText("pl"))
+            .add("center at 25%","middle at 10%", getText("sg"))
+            .add("center at 75%","middle at 10%", getText("pl"))
+            .add("center at 25%","middle at 70%", getText("F"))
+            .add("center at 75%","middle at 70%", getText("J"))
             .print("center at 50%", "middle at 50%")
         ,
         newTimer("ResponseTime", 1200)
@@ -54,3 +91,4 @@ PennController.Template("trials.csv",
                         .wait()
             )
         )
+    )
