@@ -25,16 +25,19 @@ newTrial(
     ,
     newKey("forj", "FJ")
         .wait("first")
+        .log()
     ,
     getKey("forj")
         .test.pressed("F")
         .success( 
             getVar("HandednessVar")
                 .set("lefthanded")
+                .log()
             )
         .failure(
             getVar("HandednessVar")
                 .set("righthanded")
+                .log()
             )
     )
 
