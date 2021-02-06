@@ -1,7 +1,3 @@
-// This is a simple demo script, feel free to edit or delete it
-// Find a tutorial and the list of availalbe elements at:
-// https://www.pcibex.net/documentation/
-
 PennController.ResetPrefix(null) // Shorten command names (keep this line here)
 
 newTrial(
@@ -19,12 +15,16 @@ newTrial(
     getKey("forj")
         .test.pressed("F")
         .success( 
-            setVar("HandednessVar")
+            getVar("HandednessVar")
+                .set("lefthanded")
             ,
             getText("Handedness").remove()
             ,
             newText("success", "You're a lefty!").print() )
-        .failure( 
+        .failure(
+            getVar("HandednessVar")
+                .set("righthanded")
+            ,
             getText("Handedness").remove()
             ,
             newText("failure", "You're a righty!").print() )
