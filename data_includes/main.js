@@ -113,27 +113,22 @@ PennController.Template("trials.csv",
                     newTimer("TimetoNextTrial", 1000)
                         .start()
                         .wait()
+                    )
             .success(
-                getVar("HandednessVar")
-                    .test.is("lefthanded")
-                        .succes(
-                            getKey("ResponseKey")
-                                .test.pressed("F")
-                                    .succes(
+                getKey("ResponseKey")
+                    .test.pressed("J")
+                        .success(
+                            getVar("HandednessVar")
+                                .test.is("lefthanded")
+                                    .success(
                                         getVar("Response")
-                                            .set("sg") 
-                                    )
+                                            .set("pl")
+                                            )
                                     .failure(
-                                        getKey("ResponseKey")
-                                            .test.pressed("J")
-                                                .succes(
-                                                getVar("Response")
-                                                    .set("pl")
-                                                )
-                                    )
-                        )
-                    
-            )
+                                        getVar("Response")
+                                            .set("sg")
+                                            )
+                            )
+                    )
         )
     )
-)
