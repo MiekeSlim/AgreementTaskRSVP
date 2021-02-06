@@ -87,18 +87,20 @@ PennController.Template("trials.csv",
                     .print("center at 50%", "middle at 50%")
             )
         ,
+        newVar("Response")
+        ,
         newTimer("ResponseTime", 1200)
             .log()
             .start()
         ,
-        newKey("Response", "FJ")    
+        newKey("ResponseKey", "FJ")    
             .log("first")
             .callback( getTimer("ResponseTime").stop() )
         ,
         getTimer("ResponseTime")
             .wait()
         ,
-        getKey("Response")    
+        getKey("ResponseKey")
             .test.pressed()
             .failure(
                     getCanvas("verbselection.canvas").remove()
@@ -111,6 +113,27 @@ PennController.Template("trials.csv",
                     newTimer("TimetoNextTrial", 1000)
                         .start()
                         .wait()
+            .success(
+                getVar("HandednessVar")
+                    .test.is("lefthanded")
+                        .succes(
+                            getKey("ResponseKey")
+                                .test.pressed("F")
+                                    .succes(
+                                        getVar("Response")
+                                            .set("sg") 
+                                    )
+                                    .failure(
+                                        getKey("ResponseKey")
+                                            .test.pressed("J")
+                                                .succes(
+                                                getVar("Response")
+                                                    .set("pl")
+                                                )
+                                    )
+                        )
+                    
             )
         )
     )
+)
