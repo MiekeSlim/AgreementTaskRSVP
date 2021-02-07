@@ -68,10 +68,12 @@ PennController.Template("trials.csv",
             .css("font-size", "5vh")
             .css("color", "blue")            
         ,
+        newCanvas("verbselection.canvas", "80vw", "20vh")
+        ,
         getVar("HandednessVar")
             .test.is("lefthanded")
             .success(
-                newCanvas("verbselection.canvas", "80vw", "20vh")
+                getCanvas("verbselection.canvas")
                     .add("center at 25%","middle at 10%", getText("sg"))
                     .add("center at 75%","middle at 10%", getText("pl"))
                     .add("center at 25%","middle at 70%", getText("F"))
@@ -79,7 +81,7 @@ PennController.Template("trials.csv",
                     .print("center at 50%", "middle at 50%")
             )
             .failure(
-                newCanvas("verbselection.canvas", "80vw", "20vh")
+                getCanvas("verbselection.canvas")
                     .add("center at 25%","middle at 10%", getText("pl"))
                     .add("center at 75%","middle at 10%", getText("sg"))
                     .add("center at 25%","middle at 70%", getText("F"))
@@ -107,7 +109,8 @@ PennController.Template("trials.csv",
                         .set("TimedOut")
                         .log()
                     ,    
-                    getCanvas("verbselection.canvas").remove()
+                    getCanvas("verbselection.canvas")
+                        .remove()
                     ,
                     newText("slow", "Too slow...")
                         .log()
@@ -155,7 +158,7 @@ PennController.Template("trials.csv",
                     )
         )
     .log("Sentence", row.Sentence)
-    .log("Handedness", "HandednessVar")
+    .log("Handedness", getVar("HandednessVar"))
     .log("NumberConfiguration", row.NumberConfiguration)
     .log("Quantifier", row.Quantifier)
     )
