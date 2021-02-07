@@ -103,6 +103,10 @@ PennController.Template("trials.csv",
         getKey("ResponseKey")
             .test.pressed()
             .failure(
+                    getVar("Response")
+                        .set("TimedOut")
+                        .log()
+                    ,    
                     getCanvas("verbselection.canvas").remove()
                     ,
                     newText("slow", "Too slow...")
@@ -123,12 +127,35 @@ PennController.Template("trials.csv",
                                     .success(
                                         getVar("Response")
                                             .set("pl")
+                                            .log()
                                             )
                                     .failure(
                                         getVar("Response")
                                             .set("sg")
+                                            .log()
                                             )
+                            )
+                        .failure(
+                           getKey("ResponseKey")
+                            .test.pressed("F")
+                                .success(getVar("HandednessVar")
+                                .test.is("lefthanded")
+                                    .success(
+                                        getVar("Response")
+                                            .set("sg")
+                                            .log()
+                                            )
+                                    .failure(
+                                        getVar("Response")
+                                            .set("pl")
+                                            .log()
+                                            )
+                                )
                             )
                     )
         )
+    .log("Sentence", row.Sentence)
+    .log("Handedness", "HandednessVar")
+    .log("NumberConfiguration", row.NumberConfiguration)
+    .log("Quantifier", row.Quantifier)
     )
