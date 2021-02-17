@@ -32,7 +32,7 @@ newTrial("Consent",
     ,
     newButton("I have read the study information and give my informed consent. Continue to the next page")
             .center()
-            .print("center at 50vw", "95vh")
+            .print("center at 50vw", "65vh")
             .wait()
 )
 
@@ -43,7 +43,7 @@ PennController.Template("trials.csv",
             .print("center at 50%", "middle at 30%")
         ,
         newButton("Instructions", "Revise instructions")
-            .print("center at 40%", "middle at 55%")
+            .print("center at 50%", "middle at 55%")
             .callback(
                 newTooltip("Instructions", "<p>In order to judge the numerosity of the phrase: Imagine each phrase appearing in the blank in the following question: “If you were thinking about ________, would you be thinking about one thing or more than one thing?”. Please indicate your answer by selecting <i>One</i> or <i>More than one</i> with your mouse. Sometimes both answers will seem possible. In these cases, just pick the answer that makes more sense to you. </p><p>In order to judge the imageability of the phrase, please rate each phrase according to the ease or difficulty with which it evokes a mental image of its referent. If an image is easily evoked (as it might be for a phrase like <i>the skyscraper in the city</i>, for example), you should give the phrase a high imagery rating. Phrases that evoke images only with great difficulty or not at all (for example, a phrase like <i>the truth of the matter</i>) should get low imagery ratings. Indicate your rating by selecting a number on the five-point scale underneath each phrase, where 1 is lowest in imageability and 5 is highest in imageability. </p><p>Finally, in order to judge the sensibility of the phrase, please rate how understandable the phrase seems to you. Indicate your rating by selecting a number on the five-point scale beside each phrase, where 1 is lowest in sensibility (nonsense) and 5 is highest in sensibility (completely sensible).</p>")
                     .print("center at 50%", "top at 60%")
@@ -111,10 +111,6 @@ PennController.Template("trials.csv",
         ,
         getCanvas("ImageabilityCanvas")
             .remove()            
-        ,
-        newButton("Next", "Next")
-            .print("center at 60%", "middle at 55%")
-            .wait()
     )
     .log("Phrase",              row.Phrase)
     .log("BasePhrase",          row.BasePhrase)
@@ -123,3 +119,14 @@ PennController.Template("trials.csv",
     .log("Quantifier",          row.Quantifier)
     .log("Experiment",          row.Experiment)
 )
+
+SendResults()
+
+newTrial(
+    exitFullscreen()
+    ,
+    newText("The is the end of the experiment, you can now close this window. Thank you!").print()
+    ,
+    newButton("waitforever").wait() // Not printed: wait on this page forever
+)
+.setOption("countsForProgressBar",false)
