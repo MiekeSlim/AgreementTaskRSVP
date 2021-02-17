@@ -1,13 +1,13 @@
-Condition,NumberConfiguration,Quantifier,Experiment,Phrase,BasePhrase
-Each…some.sg,SS,Each,Exp1,Each actor in some blockbuster film,The actor in the blockbuster film  
-Every…some.sg,SS,Every,Exp1,Every path around some lake,The path around the lake  
-One…some.sg,SS,One,Exp1,One photo of some girl,The photo of the girl  
-Each…some.pl,SP,Each,Exp1,Each letter from some lawyers,The letter from the lawyer  
-Every…some.pl,SP,Every,Exp1,Every demo tape from some rock singers,The demo tape from the rock singer  
-One…some.pl,SP,One,Exp1,One letter from some friends,The letter from the friend  
-Some.sg…each,SS,Each,Exp2,Some tour of each museum,The tour of the museum  
-Some.sg…every,SS,Every,Exp2,Some key to every cabinet,The key to the cabinet  
-Some.sg…one,SS,One,Exp2,Some warning from one expert,The warning from the expert  
-Some.pl…each,PS,Each,Exp2,Some babies on each photo,The baby on the photo
-Some.pl…every,PS,Every,Exp2,Some roads to every mountain,The road to the mountain
-Some.pl…one,PS,One,Exp2,Some directors of one film,The director of the film
+Condition,NumberConfiguration,Quantifier,Experiment,Phrase,BasePhrase,NumberQuestion
+Each…some.sg,SS,Each,Exp1,Each actor in some blockbuster film,The actor in the blockbuster film,How many actors?
+Every…some.sg,SS,Every,Exp1,Every path around some lake,The path around the lake,How many paths?
+One…some.sg,SS,One,Exp1,One photo of some girl,The photo of the girl,How many photos?
+Each…some.pl,SP,Each,Exp1,Each letter from some lawyers,The letter from the lawyer,How many letters?
+Every…some.pl,SP,Every,Exp1,Every demo tape from some rock singers,The demo tape from the rock singer,How many demos?
+One…some.pl,SP,One,Exp1,One letter from some friends,The letter from the friend,How many letters?  
+Some.sg…each,SS,Each,Exp2,Some tour of each museum,The tour of the museum,How many tours?  
+Some.sg…every,SS,Every,Exp2,Some key to every cabinet,The key to the cabinet,How many cabinets?
+Some.sg…one,SS,One,Exp2,Some warning from one expert,The warning from the expert,How many warnings?
+Some.pl…each,PS,Each,Exp2,Some babies on each photo,The baby on the photo,How many babies?
+Some.pl…every,PS,Every,Exp2,Some roads to every mountain,The road to the mountain,How many roads?
+Some.pl…one,PS,One,Exp2,Some directors of one film,The director of the film,How many directors?
