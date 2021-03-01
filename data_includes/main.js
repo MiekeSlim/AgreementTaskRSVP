@@ -1,248 +1,133 @@
 PennController.ResetPrefix(null) // Shorten command names (keep this line here)
+PennController.DebugOff()
 AddHost("https://users.ugent.be/~mslim/VW_DWR_Stimuli/images/");
 
-newTrial("FirstInstructions",
-    newText("Instructions","<p> In this experiment, you will read the beginning of a couple of sentences. These fragments will be presented word by word. After the full fragment is shown, the verbs <strong>is</strong> and <strong>are</strong> will be shown on the screen. It is your task to select the right verb following the preamble. You can select the response by pressing the keys 'F' or 'J' on your keyboard. </p> <p> You will have roughly a second to select a verb. If you do not select a verb within a second, the next sentence will be shown. Therefore, it is not only important to select te correct verb following the preamble, but also to do this as fast as possible. </p> <p> Press the spacebar to continue </p>")
-	    .css("font-size", "2vh")
+Header(
+    newImage("logo", "logo_UGent_EN_RGB_2400_color.png")
+        .size("10vw")       
+        .print("20vw","00vh")
+    ,
+    newImage("logo2", "icon_UGent_PP_EN_RGB_2400_color.png")
+        .size("20vw")       
+        .print("55vw","2vh")                                         
+    )
+
+newTrial("Instructions",
+	newText("Instructions","<p>Welcome to this survey!</p><p>In this survey, you will see a number of phrases. For each of these phrases, we would like you to judge whether it refers to one thing or more than one thing, whether it is easy or difficult to evoke a mental image of its referent, and whether it is easy or difficult to understand the phrase. </p><p>In order to judge the numerosity of the phrase: Imagine each phrase appearing in the blank in the following question: “If you were thinking about ________, would you be thinking about one thing or more than one thing?”. Please indicate your answer by selecting <i>One</i> or <i>More than one</i> with your mouse. Sometimes both answers will seem possible. In these cases, just pick the answer that makes more sense to you. </p><p>In order to judge the imageability of the phrase, please rate each phrase according to the ease or difficulty with which it evokes a mental image of its referent. If an image is easily evoked (as it might be for a phrase like <i>the skyscraper in the city</i>, for example), you should give the phrase a high imagery rating. Phrases that evoke images only with great difficulty or not at all (for example, a phrase like <i>the truth of the matter</i>) should get low imagery ratings. Indicate your rating by selecting a number on the five-point scale underneath each phrase, where 1 is lowest in imageability and 5 is highest in imageability. </p><p>Finally, in order to judge the sensibility of the phrase, please rate how understandable the phrase seems to you. Indicate your rating by selecting a number on the five-point scale beside each phrase, where 1 is lowest in sensibility (nonsense) and 5 is highest in sensibility (completely sensible).</p><p>The survey should take roughly ... minutes to complete. Feel free to have short breaks, but make sure that you finish the full survey within ... minutes so you will not time out on Prolific.")
 	,
 	newCanvas( "myCanvas", "60vw" , "60vh")
-        .settings.add(0,0, getText("Instructions"))       
-        .print("center at 50%", "middle at 50%")  
-    ,
-    newKey("next", " ")
-        .wait()
+	    .settings.add(0,0, getText("Instructions"))
+	    .print("center at 50%", "middle at 50%")  
+	,
+	newButton("Next", "Next")
+	    .print("center at 50%", "middle at 80%")
+	    .wait()
 	)    
-    
-newTrial("HandednessSelection",
-    newVar("HandednessVar")
-        .global()
-    ,
-    newText("Handedness", "Are you left or right handed?")
-        .css("font-size", "2vh")
-    ,
-    newText("F", "Press F")
-        .css("font-size", "2vh")
-        .css("color", "blue")
-    ,     
-    newText("J", "Press J")
-        .css("font-size", "2vh")
-        .css("color", "blue")
-    ,
-    newCanvas("verbselection.canvas", "80vw", "20vh")
-        .add("center at 50%","middle at 0%", getText("Handedness"))
-        .add("center at 20%","middle at 40%", newText("Left", "Left").css("font-size", "2vh"))
-        .add("center at 80%","middle at 40%", newText("Right", "Right").css("font-size", "2vh"))
-        .add("center at 20%","middle at 80%", getText("F"))
-        .add("center at 80%","middle at 80%", getText("J"))
-        .print("center at 50%", "middle at 50%")
-    ,
-    newKey("forj", "FJ")
-        .wait("first")
-        .log()
-    ,
-    getKey("forj")
-        .test.pressed("F")
-        .success( 
-            getVar("HandednessVar")
-                .set("lefthanded")
-                .log()
-            )
-        .failure(
-            getVar("HandednessVar")
-                .set("righthanded")
-                .log()
-            )
-    )
-    
-newTrial("HandednessCheck",
-    newText("RightHandednessCheck", "<p>You selected that you are righthanded. If this is correct, press the <strong>spacebar</strong> to continue.</p><p>If this is not correct, press on the <strong>'F'</strong> key to indicate that you are lefthanded .</p>")
-        .css("font-size", "2vh")
-    ,
-    newText("LeftHandednessCheck", "<p>You selected that you are lefthanded. If this is correct, press the <strong>spacebar</strong> to continue.</p><p>If this is not correct, press on the <strong>'J'</strong> key to indicate that you are righthanded .</p>")
-        .css("font-size", "2vh")
-    ,
-    getVar("HandednessVar")
-            .test.is("lefthanded")
-            .success(
-                newCanvas( "myCanvas", "60vw" , "60vh")
-                    .settings.add(0,0, getText("LeftHandednessCheck"))       
-                    .print("center at 50%", "middle at 50%")  
-                ,
-                newKey("LeftHandednessCheckKey", " J")
-                    .wait()
-                ,
-                getKey("LeftHandednessCheckKey")
-                    .test.pressed("J")
-                    .success( 
-                        getVar("HandednessVar")
-                            .set("righthanded")
-                            .log()
-            )
-                )
-            .failure(
-                newCanvas( "myCanvas", "60vw" , "60vh")
-                    .settings.add(0,0, getText("RightHandednessCheck"))       
-                    .print("center at 50%", "middle at 50%")
-                    ,
-                    newKey("RightHandednessCheckKey", " F")
-                        .wait()
-                    ,
-                    getKey("RightHandednessCheckKey")
-                        .test.pressed("F")
-                        .success( 
-                            getVar("HandednessVar")
-                                .set("lefthanded")
-                                .log()
-                            )
-                )
-    )    
 
-newTrial("HandednessInstructions",
-    newText("LefthandedInstructions", "You will read the beginning of sentences word-by-word. It is your task to select the right verb after this short preamble. You can choose between 'is' and 'are'.<p>If you want to select 'is', press the 'F' button on your keyboard, if you want to select 'are', press the 'J' button.</p><p>You have roughly a second to give your answer before the next trial starts. It is thus important that you give the correct response, but also to do this as fast as possible </p>")
-         .css("font-size", "2vh")
+newTrial("Consent",             
+    newText("ConsentText", "<p>We request your consent for participation in this experiment. Please read the following carefully: </p > <p>I declare that I, as a participant in a research project in the Department of Experimental Psychology at Ghent University:<br><br> <ol> <li> have been informed about the research objectives, the questions and the tasks that I will encounter during the research and that I was given the opportunity to receive further information if desired<br><br> </li><li> will participate out of free will in the research project <br><br> </li><li> am aware that the researchers do not collect any personal information that may be used to identify my identity. All the data that will be collected is completely anonymized; <br><br> </li><li> give informed consent to the researchers to store, process, and report my data in anonymized form <br><br> </li><li> am aware of the option to stop my participation in this research at any moment in time without having to provide a reason; <br><br> </li><li> know that participating or stopping my participation in the research has no negative consequences of any kind for me (apart from not receiving my payment via Prolific) <br><br> </li><li> am aware of the option to ask the researcher(s) for a summary of the results after the study is finished and the results have been known; <br><br> </li><li> agree that my data may be used for further analysis by other researchers after complete anonymization; <br><br> </li><li> am aware that Ghent University is the responsible entity with regards to the personal information collected during the study. I am also aware that the data protection officer can give me more information about the protection of my personal information. Contact: Hanne Elsen (privacy@ugent.be).</li> </ol> <br>In case you give your informed consent to participate in this study, please click on the button below. If you do not give your informed consent, please close this experiment. </p>")
     ,
-    newText("RighthandedInstructions", "You will read the beginning of sentences word-by-word. It is your task to select the right verb after this short preamble. You can choose between 'is' and 'are'.<p>If you want to select 'is', press the 'J' button on your keyboard, if you want to select 'are', press the 'F' button.</p><p>You have roughly a second to give your answer before the next trial starts. It is thus important that you give the correct response, but also to do this as fast as possible </p>")
-         .css("font-size", "2vh")
-    
+    newCanvas( "myCanvas", "60vw" , "60vh")
+        .settings.add(0,0, getText("ConsentText"))
+        .print("20vw", "15vh")
     ,
-    getVar("HandednessVar")
-        .test.is("lefthanded")
-        .success(
-            newCanvas("TaskInstructions", "60vw" , "60vh")
-                .add("center at 50%", "middle at 10%", getText("LefthandedInstructions"))
-                .add("center at 50%", "middle at 50%", newText("Press the spacebar to start the experiment").css("font-size", "2vh"))
-                .print("center at 50%", "middle at 50%")
-
-            )
-            .failure(
-            newCanvas("TaskInstructions", "60vw" , "60vh")
-                .add("center at 50%", "middle at 10%", getText("RighthandedInstructions"))
-                .add("center at 50%", "middle at 50%", newText("Press the spacebar to start the experiment").css("font-size", "2vh"))
-                .print("center at 50%", "middle at 50%")
-            )
-    ,
-    newKey("next", " ")
-        .wait()
-    )
+    newButton("I have read the study information and give my informed consent. Continue to the next page")
+            .center()
+            .print("center at 50vw", "65vh")
+            .wait()
+)
 
 PennController.Template("trials.csv",
     row => newTrial("Trials", 
-      newController("DashedSentence", {
-            s: row.Sentence,
-            mode: "speeded acceptability",
-            display: "in place",
-            wordTime: 250,
-            wordPauseTime: 150
-            })
-                .print("center at 50%", "middle at 50%")
-                .css("font-size", "10vh")
-                .wait()
+        newText("Phrase",row.Phrase)
+            .css("font-size", "3vh")
+            .print("center at 50%", "middle at 30%")
         ,
-        newText("sg", "is")
-            .css("font-size", "10vh")
-        ,     
-        newText("pl", "are")
-            .css("font-size", "10vh")
+        newButton("Instructions", "Revise instructions")
+            .print("center at 50%", "middle at 55%")
+            .callback(
+                newTooltip("Instructions", "<p>In order to judge the numerosity of the phrase: Imagine each phrase appearing in the blank in the following question: “If you were thinking about ________, would you be thinking about one thing or more than one thing?”. Please indicate your answer by selecting <i>One</i> or <i>More than one</i> with your mouse. Sometimes both answers will seem possible. In these cases, just pick the answer that makes more sense to you. </p><p>In order to judge the imageability of the phrase, please rate each phrase according to the ease or difficulty with which it evokes a mental image of its referent. If an image is easily evoked (as it might be for a phrase like <i>the skyscraper in the city</i>, for example), you should give the phrase a high imagery rating. Phrases that evoke images only with great difficulty or not at all (for example, a phrase like <i>the truth of the matter</i>) should get low imagery ratings. Indicate your rating by selecting a number on the five-point scale underneath each phrase, where 1 is lowest in imageability and 5 is highest in imageability. </p><p>Finally, in order to judge the sensibility of the phrase, please rate how understandable the phrase seems to you. Indicate your rating by selecting a number on the five-point scale beside each phrase, where 1 is lowest in sensibility (nonsense) and 5 is highest in sensibility (completely sensible).</p>")
+                    .print("center at 50%", "top at 60%")
+                )
         ,
-        newText("F", "F")
-            .css("font-size", "5vh")
-            .css("color", "blue")
-        ,     
-        newText("J", "J")
-            .css("font-size", "5vh")
-            .css("color", "blue")            
+        newCanvas("NumberCanvas", "100vw", "30vh")
+            .add("center at 50%", "15vh", newText("Number", row.NumberQuestion).css("font-size", "2vh"))
+            .add("center at 40%", "20vh", newText("One", "One")               .css("font-size", "2vh")
+                                                                                    .css("background-color", "lightgrey"))
+            .add("center at 60%", "20vh", newText("Multiple", "More than one").css("font-size", "2vh")
+                                                                                    .css("background-color", "lightgrey"))
+            .print("center at 50%", "middle at 40%")
         ,
-        newCanvas("verbselection.canvas", "80vw", "20vh")
-        ,
-        getVar("HandednessVar")
-            .test.is("lefthanded")
-            .success(
-                getCanvas("verbselection.canvas")
-                    .add("center at 25%","middle at 10%", getText("sg"))
-                    .add("center at 75%","middle at 10%", getText("pl"))
-                    .add("center at 25%","middle at 70%", getText("F"))
-                    .add("center at 75%","middle at 70%", getText("J"))
-                    .print("center at 50%", "middle at 50%")
-            )
-            .failure(
-                getCanvas("verbselection.canvas")
-                    .add("center at 25%","middle at 10%", getText("pl"))
-                    .add("center at 75%","middle at 10%", getText("sg"))
-                    .add("center at 25%","middle at 70%", getText("F"))
-                    .add("center at 75%","middle at 70%", getText("J"))
-                    .print("center at 50%", "middle at 50%")
-            )
-        ,
-        newVar("Response")
-        ,
-        newTimer("ResponseTime", 1200)
-            .log()
-            .start()
-        ,
-        newKey("ResponseKey", "FJ")    
-            .log("first")
-            .callback( getTimer("ResponseTime").stop() )
-        ,
-        getTimer("ResponseTime")
+        newSelector("NumberSelector")
+            .add(getText("One"), getText("Multiple"))
             .wait()
+            .log()
         ,
-        getKey("ResponseKey")
-            .test.pressed()
-            .failure(
-                    getVar("Response")
-                        .set("TimedOut")
-                        .log()
-                    ,    
-                    getCanvas("verbselection.canvas")
-                        .remove()
-                    ,
-                    newText("slow", "Too slow...")
-                        .log()
-                        .print("center at 50%", "middle at 50%")
-                        .css("font-size", "15vh")
-                    ,
-                    newTimer("TimetoNextTrial", 1000)
-                        .start()
-                        .wait()
-                    )
-            .success(
-                getKey("ResponseKey")
-                    .test.pressed("J")
-                        .success(
-                            getVar("HandednessVar")
-                                .test.is("lefthanded")
-                                    .success(
-                                        getVar("Response")
-                                            .set("pl")
-                                            .log()
-                                            )
-                                    .failure(
-                                        getVar("Response")
-                                            .set("sg")
-                                            .log()
-                                            )
-                            )
-                        .failure(
-                           getKey("ResponseKey")
-                            .test.pressed("F")
-                                .success(getVar("HandednessVar")
-                                .test.is("lefthanded")
-                                    .success(
-                                        getVar("Response")
-                                            .set("sg")
-                                            .log()
-                                            )
-                                    .failure(
-                                        getVar("Response")
-                                            .set("pl")
-                                            .log()
-                                            )
-                                )
-                            )
-                    )
-        )
-    .log("Sentence", row.Sentence)
-    .log("Handedness", getVar("HandednessVar"))
-    .log("NumberConfiguration", row.NumberConfiguration)
-    .log("Quantifier", row.Quantifier)
+        getCanvas("NumberCanvas").remove()
+        ,
+        newCanvas("ImageabilityCanvas", "100vw", "30vh")
+            .add("center at 50%", "15vh", newText("Imageability", "How easy is it to evoke a mental image of this phrase?").css("font-size", "2vh"))
+            .add("center at 35%", "20vh", newText("difficult").css("font-size", "2vh"))            
+            .add("center at 40%", "20vh", newText("1im", "1") .css("font-size", "2vh")
+                                                            .css("background-color", "lightgrey"))
+            .add("center at 45%", "20vh", newText("2im", "2") .css("font-size", "2vh")
+                                                            .css("background-color", "lightgrey"))
+            .add("center at 50%", "20vh", newText("3im", "3") .css("font-size", "2vh")
+                                                            .css("background-color", "lightgrey"))      
+            .add("center at 55%", "20vh", newText("4im", "4") .css("font-size", "2vh")
+                                                            .css("background-color", "lightgrey"))
+            .add("center at 60%", "20vh", newText("5im", "5") .css("font-size", "2vh")
+                                                            .css("background-color", "lightgrey"))   
+            .add("center at 65%", "20vh", newText("easy").css("font-size", "2vh"))                                                            
+            .print("center at 50%", "middle at 40%")
+        ,
+        newSelector("ImageabilitySelector")
+            .add(getText("1im"), getText("2im"), getText("3im"), getText("4im"), getText("5im"))
+            .wait()
+            .log()
+        ,
+        getCanvas("ImageabilityCanvas")
+            .remove()
+        ,
+        newCanvas("SensibilityCanvas", "100vw", "30vh")
+            .add("center at 50%", "15vh", newText("Sensibility", "How easy is it to understand this phrase?").css("font-size", "2vh"))
+            .add("center at 35%", "20vh", newText("nonsense").css("font-size", "2vh"))
+            .add("center at 40%", "20vh", newText("1se", "1") .css("font-size", "2vh")
+                                                            .css("background-color", "lightgrey"))
+            .add("center at 45%", "20vh", newText("2se", "2") .css("font-size", "2vh")
+                                                            .css("background-color", "lightgrey"))
+            .add("center at 50%", "20vh", newText("3se", "3") .css("font-size", "2vh")
+                                                            .css("background-color", "lightgrey"))      
+            .add("center at 55%", "20vh", newText("4se", "4") .css("font-size", "2vh")
+                                                            .css("background-color", "lightgrey"))
+            .add("center at 60%", "20vh", newText("5se", "5") .css("font-size", "2vh")
+                                                            .css("background-color", "lightgrey"))    
+            .add("center at 65%", "20vh", newText("completely sensible").css("font-size", "2vh"))
+            .print("center at 50%", "middle at 40%")
+        ,
+        newSelector("SensibilitySelector")
+            .add(getText("1se"), getText("2se"), getText("3se"), getText("4se"), getText("5se"))
+            .wait()
+            .log()
+        ,
+        getCanvas("ImageabilityCanvas")
+            .remove()            
     )
+    .log("Phrase",              row.Phrase)
+    .log("BasePhrase",          row.BasePhrase)
+    .log("Condition",           row.Condition)
+    .log("NumberConfiguration", row.NumberConfiguration)
+    .log("Quantifier",          row.Quantifier)
+    .log("Experiment",          row.Experiment)
+)
+
+SendResults()
+
+newTrial(
+    exitFullscreen()
+    ,
+    newText("The is the end of the experiment, you can now close this window. Thank you!").print()
+    ,
+    newButton("waitforever").wait() // Not printed: wait on this page forever
+)
+.setOption("countsForProgressBar",false)
