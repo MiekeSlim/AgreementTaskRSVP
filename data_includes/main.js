@@ -1,5 +1,6 @@
 PennController.ResetPrefix(null) // Shorten command names (keep this line here)
 PennController.DebugOff()
+AddHost("https://users.ugent.be/~mslim/VW_DWR_Stimuli/images/");
 
 Header(
     newImage("logo", "logo_UGent_EN_RGB_2400_color.png")
