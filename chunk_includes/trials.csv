@@ -1,4 +1,4 @@
-Trial,Phrase,Condition,Experiment,Number,Quantifier,List
+Trial,Phrase,Condition,Experiment,Number,Quantifier,Group
 1,Each witness for the lawyer,Exp 1 sg  Each,Exp1,sg,Each,1
 2,Each author of the novel,Exp 1 sg  Each,Exp1,sg,Each,1
 3,Each gift for the baby,Exp 1 sg  Each,Exp1,sg,Each,1
