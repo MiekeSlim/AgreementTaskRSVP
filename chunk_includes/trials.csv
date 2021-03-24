@@ -1,101 +1,101 @@
 Trial,Phrase,Condition,Experiment,Number,Quantifier,Group
-1,Every witness for the lawyers,Exp 1 pl  Every,Exp1,pl,Every,8
-2,Every author of the novels,Exp 1 pl  Every,Exp1,pl,Every,8
-3,Every gift for the babies,Exp 1 pl  Every,Exp1,pl,Every,8
-4,Every light above the tables,Exp 1 pl  Every,Exp1,pl,Every,8
-5,Every snapshot of the tourists,Exp 1 pl  Every,Exp1,pl,Every,8
-6,Every trap for the rats,Exp 1 pl  Every,Exp1,pl,Every,8
-7,Every warden at the fires,Exp 1 pl  Every,Exp1,pl,Every,8
-8,Every home of the cousins,Exp 1 pl  Every,Exp1,pl,Every,8
-9,Each ruler of the cities,Exp 1 pl  Each,Exp1,pl,Each,8
-10,Each actor in the films,Exp 1 pl  Each,Exp1,pl,Each,8
-11,Each manual for the machines,Exp 1 pl  Each,Exp1,pl,Each,8
-12,Each path around the lakes,Exp 1 pl  Each,Exp1,pl,Each,8
-13,Each producer of the movies,Exp 1 pl  Each,Exp1,pl,Each,8
-14,Each judge for the trials,Exp 1 pl  Each,Exp1,pl,Each,8
-15,Each pupil in the competitions,Exp 1 pl  Each,Exp1,pl,Each,8
-16,Each firefighter outside the buildings,Exp 1 pl  Each,Exp1,pl,Each,8
-17,The spectator at one  match  ,Exp 2 sg  One,Exp2,sg,One,8
-18,The maids for one clinic  ,Exp 2 sg  One,Exp2,sg,One,8
-19,The editor of one book  ,Exp 2 sg  One,Exp2,sg,One,8
-20,The demonstrator at one rally  ,Exp 2 sg  One,Exp2,sg,One,8
-21,The photo of one girl  ,Exp 2 sg  One,Exp2,sg,One,8
-22,The letter from one lawyer  ,Exp 2 sg  One,Exp2,sg,One,8
-23,The check from one stockbroker  ,Exp 2 sg  One,Exp2,sg,One,8
-24,The player in one commercial  ,Exp 2 sg  One,Exp2,sg,One,8
-25,The door to every office  ,Exp 2 sg  Every,Exp2,sg,Every,8
-26,The bridge to every island  ,Exp 2 sg  Every,Exp2,sg,Every,8
-27,The entrance to every laboratory  ,Exp 2 sg  Every,Exp2,sg,Every,8
-28,The recording from every singer  ,Exp 2 sg  Every,Exp2,sg,Every,8
-29,The pamphlet from every agency  ,Exp 2 sg  Every,Exp2,sg,Every,8
-30,The star of every musical  ,Exp 2 sg  Every,Exp2,sg,Every,8
-31,The garden with every spike  ,Exp 2 sg  Every,Exp2,sg,Every,8
-32,The leader of every group  ,Exp 2 sg  Every,Exp2,sg,Every,8
-33,The superintendent of each school  ,Exp 2 sg  Each,Exp2,sg,Each,8
-34,The office of each accountant  ,Exp 2 sg  Each,Exp2,sg,Each,8
-35,The consultant for each firm  ,Exp 2 sg  Each,Exp2,sg,Each,8
-36,The assistant for each lab  ,Exp 2 sg  Each,Exp2,sg,Each,8
-37,The volunteer in each village  ,Exp 2 sg  Each,Exp2,sg,Each,8
-38,The article by each writer  ,Exp 2 sg  Each,Exp2,sg,Each,8
-39,The bill from each accountant  ,Exp 2 sg  Each,Exp2,sg,Each,8
-40,The switch for each light  ,Exp 2 sg  Each,Exp2,sg,Each,8
-41,One tour of the museum  ,Exp 1 sg  One,Exp1,sg,One,8
-42,One sailor with the force  ,Exp 1 sg  One,Exp1,sg,One,8
-43,One musician at the nightclub  ,Exp 1 sg  One,Exp1,sg,One,8
-44,One boy at the campground  ,Exp 1 sg  One,Exp1,sg,One,8
-45,One secretary for the program  ,Exp 1 sg  One,Exp1,sg,One,8
-46,One key to the cabinet  ,Exp 1 sg  One,Exp1,sg,One,8
-47,One applicant for the scholarship  ,Exp 1 sg  One,Exp1,sg,One,8
-48,One helicopter for the flight  ,Exp 1 sg  One,Exp1,sg,One,8
-49,Every design of the engine  ,Exp 1 sg  Every,Exp1,sg,Every,8
-50,Every politician at the meeting  ,Exp 1 sg  Every,Exp1,sg,Every,8
-51,Every representative from the union,Exp 1 sg  Every,Exp1,sg,Every,8
-52,Every professor with the award  ,Exp 1 sg  Every,Exp1,sg,Every,8
-53,Every church near the hill,Exp 1 sg  Every,Exp1,sg,Every,8
-54,Every wall with the decoration,Exp 1 sg  Every,Exp1,sg,Every,8
-55,Every baby on the photo,Exp 1 sg  Every,Exp1,sg,Every,8
-56,Every mechanic of the motorcycle,Exp 1 sg  Every,Exp1,sg,Every,8
-57,Each cage with the gorilla,Exp 1 sg  Each,Exp1,sg,Each,8
-58,Each road to the mountain,Exp 1 sg  Each,Exp1,sg,Each,8
-59,Each cup for the winner,Exp 1 sg  Each,Exp1,sg,Each,8
-60,Each owner of the suitcase,Exp 1 sg  Each,Exp1,sg,Each,8
-61,Each director of the film,Exp 1 sg  Each,Exp1,sg,Each,8
-62,Each box with the cookie,Exp 1 sg  Each,Exp1,sg,Each,8
-63,Each commuter near the car,Exp 1 sg  Each,Exp1,sg,Each,8
-64,Each delinquent near the motorcycle,Exp 1 sg  Each,Exp1,sg,Each,8
-65,The servants in one mansion,Exp 2 pl  One,Exp2,pl,One,8
-66,The childred with one new bicycle,Exp 2 pl  One,Exp2,pl,One,8
-67,The celebrities with one limousine,Exp 2 pl  One,Exp2,pl,One,8
-68,The girl near one tent,Exp 2 pl  One,Exp2,pl,One,8
-69,The students at one  table,Exp 2 pl  One,Exp2,pl,One,8
-70,The cowboys near one horse,Exp 2 pl  One,Exp2,pl,One,8
-71,The criminals behind one  attack,Exp 2 pl  One,Exp2,pl,One,8
-72,The singers at one  concert,Exp 2 pl  One,Exp2,pl,One,8
-73,The ships near every  island,Exp 2 pl  Every,Exp2,pl,Every,8
-74,The bees near every flower,Exp 2 pl  Every,Exp2,pl,Every,8
-75,The soldiers across every  field,Exp 2 pl  Every,Exp2,pl,Every,8
-76,The musicians beside every  dancer,Exp 2 pl  Every,Exp2,pl,Every,8
-77,The cows by every tractor,Exp 2 pl  Every,Exp2,pl,Every,8
-78,The birds near every  bush,Exp 2 pl  Every,Exp2,pl,Every,8
-79,The speakers from every  school,Exp 2 pl  Every,Exp2,pl,Every,8
-80,The leaders behind every  proposal,Exp 2 pl  Every,Exp2,pl,Every,8
-81,The friends of each editor  ,Exp 2 pl  Each,Exp2,pl,Each,8
-82,The agents on each step,Exp 2 pl  Each,Exp2,pl,Each,8
-83,The cheques from each stockbroker,Exp 2 pl  Each,Exp2,pl,Each,8
-84,The blankets on each baby,Exp 2 pl  Each,Exp2,pl,Each,8
-85,The books by each computer,Exp 2 pl  Each,Exp2,pl,Each,8
-86,The bananas for each monkey,Exp 2 pl  Each,Exp2,pl,Each,8
-87,The vases for each flower,Exp 2 pl  Each,Exp2,pl,Each,8
-88,The trails across each forest,Exp 2 pl  Each,Exp2,pl,Each,8
-89,One song by the composers,Exp 1 pl  One,Exp1,pl,One,8
-90,One hotel by the lakes,Exp 1 pl  One,Exp1,pl,One,8
-91,One picture of the athletes,Exp 1 pl  One,Exp1,pl,One,8
-92,One trial of the criminals,Exp 1 pl  One,Exp1,pl,One,8
-93,One show about the popstars,Exp 1 pl  One,Exp1,pl,One,8
-94,One bedroom for the guests,Exp 1 pl  One,Exp1,pl,One,8
-95,One  boat of the fishermen ,Exp 1 pl  One,Exp1,pl,One,8
-96,One  card underneath the newspapers ,Exp 1 pl  One,Exp1,pl,One,8
-97,The  car of every burglar,Exp 2 sg  Every,Exp2,sg,Every,8
-98,The  dogs by one barn,Exp 2 pl  One,Exp2,pl,One,8
-99,Each  goat by the ditch,Exp 1 sg  Each,Exp1,sg,Each,8
-100,One  swimming pool with the slides ,Exp 1 pl  One,Exp1,pl,One,8
+1,The witnesses for every lawyer,Exp 2 pl  Every,Exp2,pl,Every,11
+2,The authors of every novel,Exp 2 pl  Every,Exp2,pl,Every,11
+3,The gifts for every baby,Exp 2 pl  Every,Exp2,pl,Every,11
+4,The lights above every table,Exp 2 pl  Every,Exp2,pl,Every,11
+5,The snapshots of every tourists,Exp 2 pl  Every,Exp2,pl,Every,11
+6,The traps for every rat,Exp 2 pl  Every,Exp2,pl,Every,11
+7,The wardens at every fire ,Exp 2 pl  Every,Exp2,pl,Every,11
+8,The homes of every cousin,Exp 2 pl  Every,Exp2,pl,Every,11
+9,The rulers of each city  ,Exp 2 pl  Each,Exp2,pl,Each,11
+10,The actors in each film  ,Exp 2 pl  Each,Exp2,pl,Each,11
+11,The manuals for each machine  ,Exp 2 pl  Each,Exp2,pl,Each,11
+12,The paths around each lake  ,Exp 2 pl  Each,Exp2,pl,Each,11
+13,The producers of each movie  ,Exp 2 pl  Each,Exp2,pl,Each,11
+14,The judges for each trial  ,Exp 2 pl  Each,Exp2,pl,Each,11
+15,The pupils in each competition  ,Exp 2 pl  Each,Exp2,pl,Each,11
+16,The firefighters outside each building  ,Exp 2 pl  Each,Exp2,pl,Each,11
+17,One spectator at the  matches,Exp 1 pl  One,Exp1,pl,One,11
+18,One maid for the  clinics,Exp 1 pl  One,Exp1,pl,One,11
+19,One editor of the books,Exp 1 pl  One,Exp1,pl,One,11
+20,One demonstrator at the rallies,Exp 1 pl  One,Exp1,pl,One,11
+21,One photo of the girls,Exp 1 pl  One,Exp1,pl,One,11
+22,One letter from the lawyers,Exp 1 pl  One,Exp1,pl,One,11
+23,One check from the stockbrokers,Exp 1 pl  One,Exp1,pl,One,11
+24,One player in the commercials,Exp 1 pl  One,Exp1,pl,One,11
+25,Every door to the offices,Exp 1 pl  Every,Exp1,pl,Every,11
+26,Every bridge to the islands,Exp 1 pl  Every,Exp1,pl,Every,11
+27,Every entrance to the laboratories,Exp 1 pl  Every,Exp1,pl,Every,11
+28,Every recording from the singers,Exp 1 pl  Every,Exp1,pl,Every,11
+29,Every pamphlet from the agencies,Exp 1 pl  Every,Exp1,pl,Every,11
+30,Every star of the musicals,Exp 1 pl  Every,Exp1,pl,Every,11
+31,Every garden with the spikes,Exp 1 pl  Every,Exp1,pl,Every,11
+32,Every leader of the groups,Exp 1 pl  Every,Exp1,pl,Every,11
+33,Each superintendent of the schools,Exp 1 pl  Each,Exp1,pl,Each,11
+34,Each office of the accountants,Exp 1 pl  Each,Exp1,pl,Each,11
+35,Each consultant for the firms,Exp 1 pl  Each,Exp1,pl,Each,11
+36,Each assistant for the labs,Exp 1 pl  Each,Exp1,pl,Each,11
+37,Each volunteer in the villages,Exp 1 pl  Each,Exp1,pl,Each,11
+38,Each article by the writers,Exp 1 pl  Each,Exp1,pl,Each,11
+39,Each bill from the accountants,Exp 1 pl  Each,Exp1,pl,Each,11
+40,Each switch for the lights,Exp 1 pl  Each,Exp1,pl,Each,11
+41,The tour of one museum  ,Exp 2 sg  One,Exp2,sg,One,11
+42,The sailor with one force  ,Exp 2 sg  One,Exp2,sg,One,11
+43,The musician at one nightclub  ,Exp 2 sg  One,Exp2,sg,One,11
+44,The boy at one campground  ,Exp 2 sg  One,Exp2,sg,One,11
+45,The secretary for one program  ,Exp 2 sg  One,Exp2,sg,One,11
+46,The key to one cabinet  ,Exp 2 sg  One,Exp2,sg,One,11
+47,The applicant for one scholarship  ,Exp 2 sg  One,Exp2,sg,One,11
+48,The helicopter for one flight  ,Exp 2 sg  One,Exp2,sg,One,11
+49,The design of every engine  ,Exp 2 sg  Every,Exp2,sg,Every,11
+50,The politician at every meeting  ,Exp 2 sg  Every,Exp2,sg,Every,11
+51,The representative from every union,Exp 2 sg  Every,Exp2,sg,Every,11
+52,The professor with every award  ,Exp 2 sg  Every,Exp2,sg,Every,11
+53,The church near every hill,Exp 2 sg  Every,Exp2,sg,Every,11
+54,The wall with every decoration,Exp 2 sg  Every,Exp2,sg,Every,11
+55,The baby on every photo,Exp 2 sg  Every,Exp2,sg,Every,11
+56,The mechanic of every motorcycle,Exp 2 sg  Every,Exp2,sg,Every,11
+57,The cage with each gorilla,Exp 2 sg  Each,Exp2,sg,Each,11
+58,The road to each mountain,Exp 2 sg  Each,Exp2,sg,Each,11
+59,The cup for each winner,Exp 2 sg  Each,Exp2,sg,Each,11
+60,The owner of each suitcase,Exp 2 sg  Each,Exp2,sg,Each,11
+61,The director of each film,Exp 2 sg  Each,Exp2,sg,Each,11
+62,The box with each cookie,Exp 2 sg  Each,Exp2,sg,Each,11
+63,The commuter near each car,Exp 2 sg  Each,Exp2,sg,Each,11
+64,The delinquent near each motorcycle,Exp 2 sg  Each,Exp2,sg,Each,11
+65,One servant in the mansion,Exp 1 sg  One,Exp1,sg,One,11
+66,One child with the new bicycle,Exp 1 sg  One,Exp1,sg,One,11
+67,One celebrity with the limousine,Exp 1 sg  One,Exp1,sg,One,11
+68,One girl near the tent,Exp 1 sg  One,Exp1,sg,One,11
+69,One student at the  table,Exp 1 sg  One,Exp1,sg,One,11
+70,One cowboy near the horse,Exp 1 sg  One,Exp1,sg,One,11
+71,One criminal behind the  attack,Exp 1 sg  One,Exp1,sg,One,11
+72,One singer at the  concert,Exp 1 sg  One,Exp1,sg,One,11
+73,Every ship near the  island,Exp 1 sg  Every,Exp1,sg,Every,11
+74,Every bee near the flower,Exp 1 sg  Every,Exp1,sg,Every,11
+75,Every soldier across the  field,Exp 1 sg  Every,Exp1,sg,Every,11
+76,Every musician beside the  dancer,Exp 1 sg  Every,Exp1,sg,Every,11
+77,Every cow by the tractor,Exp 1 sg  Every,Exp1,sg,Every,11
+78,Every bird near the  bush,Exp 1 sg  Every,Exp1,sg,Every,11
+79,Every speaker from the  school,Exp 1 sg  Every,Exp1,sg,Every,11
+80,Every leader behind the  proposal,Exp 1 sg  Every,Exp1,sg,Every,11
+81,Each friend of the editor  ,Exp 1 sg  Each,Exp1,sg,Each,11
+82,Each agent on the step,Exp 1 sg  Each,Exp1,sg,Each,11
+83,Each cheque from the stockbroker,Exp 1 sg  Each,Exp1,sg,Each,11
+84,Each blanket on the baby,Exp 1 sg  Each,Exp1,sg,Each,11
+85,Each book by the computer,Exp 1 sg  Each,Exp1,sg,Each,11
+86,Each banana for the monkey,Exp 1 sg  Each,Exp1,sg,Each,11
+87,Each vase for the flower,Exp 1 sg  Each,Exp1,sg,Each,11
+88,Each trail across the forest,Exp 1 sg  Each,Exp1,sg,Each,11
+89,The songs by one composer,Exp 2 pl  One,Exp2,pl,One,11
+90,The hotels by one lake,Exp 2 pl  One,Exp2,pl,One,11
+91,The pictures of one athlete,Exp 2 pl  One,Exp2,pl,One,11
+92,The trials of one criminal,Exp 2 pl  One,Exp2,pl,One,11
+93,The shows about one popstar,Exp 2 pl  One,Exp2,pl,One,11
+94,The bedrooms for one guest,Exp 2 pl  One,Exp2,pl,One,11
+95,The  boats of one fisherman ,Exp 2 pl  One,Exp2,pl,One,11
+96,The  cards underneath one newspaper,Exp 2 pl  One,Exp2,pl,One,11
+97,One  car of the burglars ,Exp 1 pl  One,Exp1,pl,One,11
+98,Each  dog by the barn,Exp 1 sg  Each,Exp1,sg,Each,11
+99,The  goat by every ditch,Exp 2 sg  Every,Exp2,sg,Every,11
+100,The  swimming pools with each slide ,Exp 2 pl  Each,Exp2,pl,Each,11
